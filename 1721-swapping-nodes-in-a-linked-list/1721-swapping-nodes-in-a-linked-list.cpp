@@ -20,7 +20,7 @@ public:
         // NUmber of Node is stored in ct
         int left = k;
         int right = ct - k + 1;
-        // cout <<"ct = " << ct << endl<< left << endl << right << endl;
+        cout <<"ct = " << ct << endl<< left << endl << right << endl;
         ListNode* n1 = NULL, *n2 = NULL;
         
         temp = head;
