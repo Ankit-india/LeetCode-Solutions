@@ -9,12 +9,8 @@ public:
         for(auto x: nums){
             dp[x] += x;
         }
-        // for(auto x: dp){
-//             cout << x << " ";
-//         }
         
         for(int i = 0; i < n; i++){
-            // int temp1 = n2 + (dp[i] * i);
             int temp1 = n2 + dp[i]; 
             int temp2 = max(n1,n2);
             n1 = temp1;
