@@ -32,7 +32,7 @@ public:
                 list2 = list2 -> next;
             }
         }
-        cout << temp -> val;
+        // cout << temp -> val;
         while(list1 != NULL){
             temp -> next = list1;
             temp = temp -> next;
