@@ -28,19 +28,19 @@ public:
             }
             else{
                 temp -> next = list2;
-                temp = temp -> next;
+                temp = list2;
                 list2 = list2 -> next;
             }
         }
         // cout << temp -> val;
         while(list1 != NULL){
             temp -> next = list1;
-            temp = temp -> next;
+            temp = list1;
             list1 = list1 -> next;
         }
         while(list2 != NULL){
             temp -> next = list2;
-            temp = temp -> next;
+            temp = list2;
             list2 = list2 -> next;
         }
         
