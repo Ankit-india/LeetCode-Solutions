@@ -26,17 +26,13 @@ public:
         ListNode* prev = dummyNode;
         while(temp != NULL && s >= k){
             stack<ListNode*> st;
-            // cout << " hello";
             int i = k;
             while(i > 0 && (s >= k) && temp != NULL){
                 st.push(temp);
                 temp = temp -> next;
-                
                 i--;
             }
-            // cout <<"s = " <<  s << endl;
             s -= k;
-            // cout <<"s = " <<  s << endl;
             while(!st.empty()){
                 prev -> next = st.top();
                 st.pop();
@@ -45,7 +41,6 @@ public:
             }
         }
         prev -> next = temp;
-        // cout << prev -> val << endl;
         return dummyNode -> next;
         
         
