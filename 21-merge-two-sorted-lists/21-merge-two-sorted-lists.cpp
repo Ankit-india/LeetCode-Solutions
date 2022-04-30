@@ -23,7 +23,7 @@ public:
         while(list1 != NULL && list2 != NULL){
             if(list1 -> val <= list2 -> val){
                 temp -> next = list1;
-                temp = temp -> next;
+                temp = list1;
                 list1 = list1 -> next;
             }
             else{
