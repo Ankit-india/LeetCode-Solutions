@@ -22,9 +22,6 @@ public:
         int n = y.size();
         int ct = lcs(x,y,m,n);
         
-        if(m == n){
-            return m + n - 2 * ct;
-        } 
-        return m - ct + n - ct;
+        return m + n - 2 * ct;
     }
 };
