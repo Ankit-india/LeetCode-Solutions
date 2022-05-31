@@ -12,9 +12,9 @@ public:
     int getPairsCount(int arr[], int n, int k) {
         // code here
         unordered_map<int, int> mp;
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n; i++){
             mp[arr[i]]++;
-     
+        }
         int twice_count = 0;
      
         for (int i = 0; i < n; i++) {
