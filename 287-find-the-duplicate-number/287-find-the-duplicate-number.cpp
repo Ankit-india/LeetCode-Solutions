@@ -1,17 +1,13 @@
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
-        int ans;
-        
-        vector<int> t(nums.size() + 1);
-        for(int i = 0; i <= nums.size(); i++){
-            t[nums.at(i)]++;
-            if(t[nums.at(i)] > 1){ 
-                // cout << i;
-                ans = nums.at(i);
-                break;
-            }
+        vector<int> refer(nums.size(), 0);
+        for(auto itr = nums.begin(); itr != nums.end(); itr++){
+            if(refer[*itr] != 0 )
+                return *itr;
+            else
+                refer[*itr] = 1;
         }
-        return ans;
+        return 0;
     }
 };
