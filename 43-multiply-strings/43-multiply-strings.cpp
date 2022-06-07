@@ -10,27 +10,27 @@ public:
         reverse(num2.begin(), num2.end());
         int n1 = num1.size();
         int n2 = num2.size();
-        vector<int> v(n1 + n2, 0);
+        vector<int> temp(n1 + n2, 0);
         for (int i = 0; i < n1; i++)
         {
             for (int j = 0; j < n2; j++)
             {
                 int k = (num1[i] - '0') * (num2[j] - '0');
-                v[i + j] += k;
-                v[i + j + 1] += v[i + j] / 10;
-                v[i + j] %= 10;
+                temp[i + j] += k;
+                temp[i + j + 1] += temp[i + j] / 10;
+                temp[i + j] %= 10;
             }
         }
-        reverse(v.begin(), v.end());
+        reverse(temp.begin(), temp.end());
         int z = 0;
-        while (z < v.size() && v[z] == 0)
+        while (z < temp.size() && temp[z] == 0)
         {
             z++;
         }
         string s = "";
-        for (int i = z; i < v.size(); i++)
+        for (int i = z; i < temp.size(); i++)
         {
-            s += to_string(v[i]);
+            s += to_string(temp[i]);
         }
         return s;
     }
