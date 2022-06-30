@@ -7,10 +7,10 @@ public:
         // if size of nums is ODD
         
         // if(n & 1){
-            int mid = nums[n / 2];
-            for(int i = 0; i < n; i++){
-                ans += abs(mid - nums[i]);
-            }
+        int mid = nums[n / 2];
+        for(int i = 0; i < n; i++){
+            ans += abs(mid - nums[i]);
+        }
         // }
         // // if size of nums is even
         // else{
