@@ -27,7 +27,22 @@ class Solution {
     }
 public:
     int minCut(string s) {
-        vector<int> dp(s.size(), -1);
-        return fun(0, s.size(), s, dp) - 1;
+        // vector<int> dp(s.size(), -1);
+        int n = s.size();
+        vector<int> dp(n+1, 0);
+        dp[n] = 0;
+        
+        for(int i = n -1; i >= 0; i--){
+            int ans = INT_MAX;
+        
+            for(int j = i; j < n; j++){
+                if(checkPalindrome(i,j,s)){
+                    int cost = 1 + dp[j+1];
+                    ans = min(ans, cost);
+                }
+            }
+            dp[i] = ans;
+        }
+        return dp[0] - 1;
     }
 };
