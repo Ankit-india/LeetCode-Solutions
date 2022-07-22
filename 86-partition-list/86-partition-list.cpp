@@ -14,7 +14,7 @@ public:
         if(head == NULL){
             return;
         }
-        cout << head -> val;
+        // cout << head -> val;
         display(head -> next);
     }
     ListNode* partition(ListNode* head, int x) {
