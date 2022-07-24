@@ -1,15 +1,23 @@
 class Solution {
+    vector<int> fillArray(vector<int>& arr){
+        vector<int> temp;
+        temp.push_back(1);
+        for(int i = 1; i < arr.size(); i++){
+            temp.push_back(arr[i-1] + arr[i]);
+        }
+        temp.push_back(1);
+        return temp;
+    }
 public:
     vector<vector<int>> generate(int numRows) {
-        vector<vector<int>> ans(numRows);
-        
-        for(int i = 0; i < numRows; i++){
-            ans[i].resize(i+1);
-            ans[i][0] = ans[i][i] = 1;
-            
-            for(int j = 1; j < i; j++){
-                ans[i][j] = ans[i-1][j-1] + ans[i-1][j];
-            }
+        vector<vector<int>> ans;
+        ans.push_back({1});
+        if(numRows == 1){
+            return ans;
+        }
+        numRows--;
+        while(numRows--){
+            ans.push_back(fillArray(ans.back()));
         }
         return ans;
     }
