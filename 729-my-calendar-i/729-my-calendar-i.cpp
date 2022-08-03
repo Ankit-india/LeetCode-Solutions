@@ -5,7 +5,7 @@ public:
     
     bool book(int start, int end) {
         auto x = arr.upper_bound(start);
-        if(x == arr.end() || end<= x->second) {
+        if(x == arr.end() || end <= x->second) {
             arr[end]=start;
             return true;
         } 
