@@ -31,7 +31,7 @@ class Solution {
 //         }
         
 //         return dp[target];
-         vector< unsigned int> dp(target+1);
+         vector< unsigned int> dp(target+1,0);
         dp[0]=1;
         
         for(int i=1; i<target+1; i++)
