@@ -4,7 +4,7 @@ public:
         int ans = 0;
         int i = 0;
         priority_queue<int>q;
-        while( startFuel < target) {
+        for(int j = 0; startFuel < target; j++) {
             for(; i < stations.size() && stations[i][0] <= startFuel; i++){
                 q.push(stations[i][1]);
             }
