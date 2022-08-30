@@ -14,8 +14,6 @@ public:
         vector<int> temp = nums;
         while(temp.size() != 1){
             temp = helperFunc(temp);
-            // for(int i = 0; i < temp.size(); i++) cout << temp[i] << " " ;
-            cout << endl;    
         }
         return temp[0];
     }
