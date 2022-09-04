@@ -10,16 +10,9 @@
  * };
  */
 class Solution {
-    void preorder(TreeNode* root, map<int, vector<int>>& mp, int pos){
-        if(root == NULL) return;
-        
-        mp[pos].push_back(root -> val);
-        preorder(root -> left, mp, pos-1);
-        preorder(root -> right, mp, pos+1);
-    }
-public:
+   public:
     vector<vector<int>> verticalTraversal(TreeNode* root) {
-         map<int,map<int,multiset<int>>> mp;
+        map<int,map<int,multiset<int>>> mp;
         queue<pair<TreeNode*,pair<int,int>>> q;
         q.push({root,{0,0}});
         while(!q.empty()){
