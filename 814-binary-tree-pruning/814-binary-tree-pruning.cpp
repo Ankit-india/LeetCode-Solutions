@@ -15,10 +15,6 @@ public:
         if(root == NULL){
             return root;
         }
-        if(root -> left == NULL && root -> right == NULL){
-            if(root -> val == 1) return root;
-            else return NULL;
-        }
         TreeNode* lt = pruneTree(root-> left);
         if(lt == NULL) root -> left = NULL;
         TreeNode* rt = pruneTree(root -> right);
